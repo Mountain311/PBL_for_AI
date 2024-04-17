@@ -54,8 +54,8 @@ def main():
 
     if hsi_file is not None and msi_file is not None:
         # Load the HSI and MSI images
-        hsi = np.array(Image.open(hsi_file))
-        msi = np.array(Image.open(msi_file))
+        hsi = np.array(hsi_file)
+        msi = np.array(msi_file)
 
         # Perform super-resolution using image fusion
         predicted_hsi = single_image_run(hsi, msi, model)
